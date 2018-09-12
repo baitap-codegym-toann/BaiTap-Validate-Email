@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email</title>
+</head>
+<body>
+<h1 align="center">Email smart checker</h1>
+<p align="center"><input type="text" id="input" value=""></p>
+<script>
+    let reg =/^[A-Za-z]+[A-Za-z0-9]*@[A-Za-z]+(\.[A-Za-z0-9]+)$/;
+    document.getElementById("input").addEventListener("keydown",function (e) {
+        if(e.key ==="Enter"){
+            if (reg.test(document.getElementById("input").value)){
+                alert("email có thể tồn tại");
+            }else {
+                alert("email khó có thể tồn tại");
+            }
+            document.getElementById("input").value = "";
+        }
+    })
+</script>
+</body>
+</html>
